@@ -9,8 +9,8 @@
 def new(num_buckets=256):
     """Initializes a Map with the given number of buckets."""
     aMap = []  # 创建一个包含列表的变量aMap
-    for i in range(0, num_buckets):
-        aMap.append([])  # 将num
+    for i in range(0, num_buckets):  # num_buckets用来存放给hashmap设置的内容
+        aMap.append([])  # 将num_buckets放入aMap
     return aMap
 # 创建函数生成hashmap的开始，即初始化。
 
