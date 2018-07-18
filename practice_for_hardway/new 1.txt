@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 this is text file
 test sublimeGit
+=======
+this is text file 
+test sublimeGit
+>>>>>>> 92ea9069ff9c27bbf03bcb51a5b6350c27e99b89
