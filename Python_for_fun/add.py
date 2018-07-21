@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Date    : 2018-07-14 19:50:37
 # @Author  : Star (1140330611@qq.com)
-# @Link    : ${link}
+# @Link    : https://github.com/chenstarsQ/My-Python-Study-Note
 # @Version : $Id$
 
 A = 0
