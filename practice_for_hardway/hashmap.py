@@ -19,6 +19,8 @@ def hash_key(aMap, key):
     """Given a key this will create a number and then convert it to
     an index for the aMap's buckets."""
     return hash(key) % len(aMap)
+# 用hash()函数将字符转化为长数字，之后采用 % 将长数字缩小
+# 限制大数）来获得一个较小的数字。
 # 是dict如何工作的核心
 
 
@@ -26,6 +28,7 @@ def get_bucket(aMap, key):
     """Given a key, find the bucket where it would go."""
     bucket_id = hash_key(aMap, key)
     return aMap[bucket_id]
+# 使用hash_key()来找到一个Key所在的位置（bucket_id）
 
 
 def get_slot(aMap, key, default=None):
@@ -39,12 +42,18 @@ def get_slot(aMap, key, default=None):
         if key == k:
             return i, k, v
     return -1, key, default
+# enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个
+# 索引序列，同时列出数据和数据下标，一般用在 for 循环当中
+# get_slot() 使用get_bucket() 来获得一个Key的bucket，之后通过遍历bucket
+# 中的每一个元素来获得对应的Key，之后返回一个(i, K, v)的元组，
+# i 是Key的下标，K 是key本身，v是Key的值。
 
 
 def get(aMap, key, default=None):
     """Gets the value in a bucket for the given key, or the default."""
     i, k, v = get_slot(aMap, key, default=default)
     return v
+# 使用get_slot()获得i, k, v 但只返回v
 
 
 def set(aMap, key, value):
@@ -57,6 +66,8 @@ def set(aMap, key, value):
     else:
         # the key does not, append to create it
         bucket.append((key, value))
+# 对字典bucket进行set，并实现无此键值新增（append），
+# 有此键值则覆盖（bucke[i] = (key, value)）
 
 
 def delete(aMap, key):
@@ -67,7 +78,8 @@ def delete(aMap, key):
         if key == k:
             del bucket[i]
             break
-
+# xrange() 与range() 使用方法类似，不同的是xrange()
+# 为一生成器（单个数），而range()则生成一数列（一组数）
 
 def list(aMap):
     """Prints out what's in the Map."""
