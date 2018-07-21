@@ -81,6 +81,7 @@ def delete(aMap, key):
 # xrange() 与range() 使用方法类似，不同的是xrange()
 # 为一生成器（单个数），而range()则生成一数列（一组数）
 
+
 def list(aMap):
     """Prints out what's in the Map."""
     for bucket in aMap:
