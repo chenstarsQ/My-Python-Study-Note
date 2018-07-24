@@ -19,7 +19,7 @@ today = target_dir + os.sep + time.strftime('%Y%m%d')
 # 将当前时间作为 zip 文件的文件名
 now = time.strftime('%H%M%S')
 # zip 文件名称格式                             \\update
-comment = input('Enter a comment - - > ' )
+comment = input('Enter a comment - - > ')
 # 检查是否有评论输入
 if len(comment) == 0:
     target = today + os.sep + now + '.zip'
@@ -28,7 +28,7 @@ else:
         comment.replace(' ', '_') + '.zip'
 # 如果目标目录还不存在，则进行创建
 if not os.path.exists(target_dir):
-    print('we don\'t have this file' )
+    print('we don\'t have this file')
     os.mkdir(target_dir)
 else:
     print('we already have this file')
@@ -38,8 +38,9 @@ if not os.path.exists(today):
     os.mkdir(today)
     print('Successfully created directory', today)
 # 5. 我们使用 haozip 命令将文件打包成 zip 格式
-HaoZipC_command ='HaoZipC a -tzip {0} {1} -w{2}'.format(target,
-                                            ' '.join(source),target_dir)
+HaoZipC_command = 'HaoZipC a -tzip {0} {1} -w{2}'.format(target,
+                                                         ' '.join(source),
+                                                         target_dir)
 # ' '.join():''分隔符，''可空
 # 运行备份
 print('Zip command is:')
