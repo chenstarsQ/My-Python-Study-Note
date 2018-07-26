@@ -7,13 +7,13 @@
 
 # PythonDraw.py
 import turtle  # 导入绘图库turtle
-turtle.setup(650, 350, 200, 200)
-turtle.penup()
-turtle.fd(-250)
-turtle.pendown()
-turtle.pensize(50)
-turtle.pencolor("red")
-turtle.seth(-40)
+turtle.setup(650, 350, 200, 200)  # 设置窗口位置
+turtle.penup()  # 提笔
+turtle.fd(-250)  # 朝turtle头部前进(forward)-250像素，即后退250像素
+turtle.pendown()  # 落笔
+turtle.pensize(50)  # 设置笔尖大小为50像素的圆
+turtle.pencolor("purple")  # 设置笔的颜色为紫色
+turtle.seth(-40)  # 
 for i in range(4):
     turtle.circle(40, 80)
     turtle.circle(-40, 80)
