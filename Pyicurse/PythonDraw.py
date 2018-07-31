@@ -13,12 +13,12 @@ turtle.fd(-250)  # 朝turtle头部前进(forward)-250像素，即后退250像素
 turtle.pendown()  # 落笔
 turtle.pensize(50)  # 设置笔尖大小为50像素的圆
 turtle.pencolor("purple")  # 设置笔的颜色为紫色
-turtle.seth(-40)  # 
-for i in range(4):
+turtle.seth(-40)  # 设定绝对角度
+for i in range(4):  # 循环绘制圆弧
     turtle.circle(40, 80)
     turtle.circle(-40, 80)
 turtle.circle(40, 80/2)
 turtle.fd(40)
 turtle.circle(50, 180)
 turtle.fd(40*2/3)
-turtle.done()
+turtle.done()  # 表示暂停绘制，绘图窗口不关闭
