@@ -13,8 +13,10 @@ def test_room():
 
     gold = Room("GoldRoom",
                 """This room has gold in it you can grab. There's a
+    door to the north.""")  # 输入类Room的变量
+    assert_equal(gold.name, "GoldRoom")  # 验证gold.name=name=GoldRoom
+    assert_equal(gold.description, """This room has gold in it you can grab. There's a
     door to the north.""")
-    assert_equal(gold.name, "GoldRoom")
     assert_equal(gold.paths, {})
 
 
