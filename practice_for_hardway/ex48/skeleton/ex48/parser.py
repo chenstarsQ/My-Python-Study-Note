@@ -57,10 +57,10 @@ def parse_object(word_list):
     next_word = peek(word_list)
     if next_word == 'noun':
         return match(word_list, 'noun')
-    elif next_word == 'directionn':
-        return match(word_list, 'directionn')
+    elif next_word == 'direction':
+        return match(word_list, 'direction')
     else:
-        raise ParserError("Expected a noun or directionn next.")
+        raise ParserError("Expected a noun or direction next.")
 
 
 def parse_subject(word_list):
@@ -80,3 +80,4 @@ def parse_sentence(word_list):
     obj = parse_object(word_list)
 
     return Sentence(subj, verb, obj)
+x = parse_sentence([('verb', 'run'), ('noun', 'player'), ('direction', 'north')])
