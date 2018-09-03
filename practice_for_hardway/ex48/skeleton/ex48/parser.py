@@ -80,3 +80,4 @@ def parse_sentence(word_list):
     obj = parse_object(word_list)
 
     return Sentence(subj, verb, obj)
+x = parse_sentence([('verb', 'run'), ('noun', 'player'), ('direction', 'north')])
