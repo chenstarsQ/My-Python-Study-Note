@@ -5,14 +5,12 @@
 # @Link    : https://github.com/chenstarsQ/My-Python-Study-Note
 # @Version : $Id$
 
-A = 0
 B = 0
 i = 0
 add = 1
 while add:
     i = i+1
-    A += 1
-    B += A
+    B += i
     if i == 100:
         break
 print(B)
